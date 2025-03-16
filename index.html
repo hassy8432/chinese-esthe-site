@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>チャイニーズエステ口コミサイト</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
+</head>
+<body>
+    <header>
+        <h1>チャイニーズエステ口コミサイト</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">ホーム</a></li>
+                <li><a href="#reviews">口コミ</a></li>
+                <li><a href="#ranking">ランキング</a></li>
+                <li><a href="#payment">プレミアム会員</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home">
+        <h2>最新の口コミをチェック！</h2>
+        <p>全国のチャイニーズエステの口コミを閲覧できます。</p>
+    </section>
+    
+    <section id="reviews">
+        <h2>口コミ一覧</h2>
+        <ul id="review-list">
+            <li>サンプル口コミ1 - ★★★★☆</li>
+            <li>サンプル口コミ2 - ★★★☆☆</li>
+        </ul>
+        <button onclick="submitReview()">口コミを投稿</button>
+    </section>
+    
+    <section id="ranking">
+        <h2>エステランキング</h2>
+        <p>ユーザー評価の高いエステTOP5を掲載！</p>
+    </section>
+    
+    <section id="payment">
+        <h2>プレミアム会員登録</h2>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="business" value="your-paypal-email@example.com">
+            <input type="hidden" name="item_name" value="プレミアム会員">
+            <input type="hidden" name="amount" value="1500">
+            <input type="hidden" name="currency_code" value="JPY">
+            <button type="submit">PayPalで支払う</button>
+        </form>
+    </section>
+    
+    <footer>
+        <p>© 2024 チャイニーズエステ口コミサイト</p>
+    </footer>
+</body>
+</html>
