@@ -28,10 +28,22 @@
     <section id="reviews">
         <h2>口コミ一覧</h2>
         <ul id="review-list">
-            <li>サンプル口コミ1 - ★★★★☆</li>
-            <li>サンプル口コミ2 - ★★★☆☆</li>
+            <!-- ここに口コミが追加される -->
         </ul>
-        <button onclick="submitReview()">口コミを投稿</button>
+        <h3>口コミを投稿する</h3>
+        <form onsubmit="event.preventDefault(); submitReview();">
+            <input type="text" id="review-name" placeholder="名前" required>
+            <select id="review-rating" required>
+                <option value="">評価を選択</option>
+                <option value="1">★☆☆☆☆</option>
+                <option value="2">★★☆☆☆</option>
+                <option value="3">★★★☆☆</option>
+                <option value="4">★★★★☆</option>
+                <option value="5">★★★★★</option>
+            </select>
+            <textarea id="review-comment" placeholder="口コミを入力" required></textarea>
+            <button type="submit">口コミを投稿</button>
+        </form>
     </section>
     
     <section id="ranking">
