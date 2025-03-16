@@ -8,7 +8,8 @@ function submitReview() {
     
     if (name && rating && comment) {
         const reviewList = document.getElementById('review-list');
-        const newReview = document.createElement('li');
+        const newReview = document.createElement('div');
+        newReview.classList.add('review-card');
         newReview.innerHTML = `<strong>${name}</strong> - ${'★'.repeat(rating)}<br>${comment}`;
         reviewList.appendChild(newReview);
         
@@ -18,6 +19,7 @@ function submitReview() {
         localStorage.setItem('reviews', JSON.stringify(reviews));
         
         alert('口コミが投稿されました！');
+        document.getElementById('review-form').reset();
     } else {
         alert('全ての項目を入力してください！');
     }
@@ -28,7 +30,8 @@ window.onload = function () {
     const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
     const reviewList = document.getElementById('review-list');
     reviews.forEach(review => {
-        const newReview = document.createElement('li');
+        const newReview = document.createElement('div');
+        newReview.classList.add('review-card');
         newReview.innerHTML = `<strong>${review.name}</strong> - ${'★'.repeat(review.rating)}<br>${review.comment}`;
         reviewList.appendChild(newReview);
     });
